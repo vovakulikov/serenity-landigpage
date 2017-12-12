@@ -9,8 +9,12 @@ module.exports = function (paths) {
                     test: /\.scss$/,
                     include: paths,
                     use: [
-                        'style-loader',
-                        'css-loader',
+                        {
+                            loader: 'style-loader'
+                        },
+                        {
+                            loader: 'css-loader'
+                        },
                         'sass-loader'
                     ]
                 }

@@ -9,8 +9,20 @@ module.exports = function (paths) {
                     test: /\.css$/,
                     include: paths,
                     use: [
-                        'style-loader',
-                        'css-loader'
+                        {
+                            loader: 'style-loader',
+                            // options: {
+                            //     modules: true,
+                            //     localIdentName: '[name]__[local]___[hash:base64:5]'
+                            // }
+                        },
+                        {
+                            loader: 'css-loader',
+                            // options: {
+                            //     localIdentName: '[sha512:hash:base32]-[name]-[local]',
+                            //     modules: true
+                            // }
+                        }
                     ]
                 }
             ]

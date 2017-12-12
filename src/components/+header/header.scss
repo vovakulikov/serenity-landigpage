@@ -15,13 +15,14 @@
   align-items: center;
 
   &__icon {
-    flex-basis: 347px;
-    flex-grow: 0;
+    width: 347px;
     height: 85px;
+    flex-grow: 0;
   }
 
   &__menu {
     flex: 1;
+    flex-wrap: wrap;
   }
 
   &__button {
