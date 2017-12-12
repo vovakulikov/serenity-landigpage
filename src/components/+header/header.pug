@@ -1,0 +1,50 @@
+include ./components/logo/logotype
+include ./components/menu/menu
+include ./components/button/button
+
+mixin header-section()
+    div.header-section
+
+        header.header
+
+            +logotype().header__icon
+
+            +menu([ 'О Серенити',
+                    'Токены',
+                    'RoadMap',
+                    'MVP',
+                    'Медиа',
+                    'События',
+                    'Команда',
+                    'Эдвайзеры',
+                    'FAQ'
+            ]).header__menu
+
+            +custom-button('Войти').header__button
+            +custom-button('Купить Токены').custom-button_is-fill.header__button
+
+
+        section.social-icons
+            i.social-icons__item.social-icons__item_is-facebook
+            i.social-icons__item.social-icons__item_is-bitcoin
+            i.social-icons__item.social-icons__item_is-linkedin
+            i.social-icons__item.social-icons__item_is-meduim
+            i.social-icons__item.social-icons__item_is-twitter
+            i.social-icons__item.social-icons__item_is-youtube
+
+        section.content
+            h1.content__title Serenity
+
+            div.content__primary-text
+                p Хотите вместе с нами создать безопасный рынок трейдинга — присоединяйтесь к нам!
+
+            div.content__text
+                p Защита средств инвесторов от мошенничества брокеров
+                p Прозрачность торговых операций и их запись в блокчейн
+                p Инвестирование криптовалюты в реальные активы: cfd, фьючерсы, акции
+
+            div.content__buttons
+                +custom-button('Инвестировать').custom-button_is-primary.custom-button_is_big.content__button
+                +custom-button('telegram').custom-button_is_big.content__button
+                +custom-button('bitcointalk').custom-button_is_big.content__button
+

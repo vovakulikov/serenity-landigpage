@@ -1,7 +1,14 @@
+include ./mixins.pug
+
 doctype html
 html
     head
-        meta(chartset = 'utf-8')
-        title webpack app
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        //- Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это.
+        meta(name='format-detection', content='telephone=no')
+
+        //block meta
+        //    title Home
     body
         block main

@@ -1,0 +1,7 @@
+
+mixin menu(menu)
+    ul.menu&attributes(attributes)
+        each menuItem in menu
+
+            li.menu__item
+                a.menu__link(href='') #{menuItem}

@@ -1,5 +1,5 @@
-extends ./pug/base
+extends ./pug/base.pug
 
 block main
-    h1 Test
-    img(src=require('./images/webpack.svg') width="100")
+   main.app-root-wrapper
+    +header-section()
